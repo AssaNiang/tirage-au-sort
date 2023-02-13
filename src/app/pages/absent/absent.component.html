@@ -1,0 +1,27 @@
+
+
+    <div>
+        <p>les absents hommes sont :</p>
+        <ng-container *ngFor="let absent of  StudentInClass">
+            <app-absent-man *ngIf=" absent.isPresent==false && absent.isWoman==false"[absentMan]="absent" (removeElement)="addRemove()"></app-absent-man>
+        </ng-container>
+    </div>
+
+    <div>
+        <p>les absents femmes sont :</p>
+        <ng-container *ngFor="let absent of  StudentInClass">
+            <app-absent-woman *ngIf=" absent.isPresent==false && absent.isWoman"[absentWoman]="absent" (removeElement1)="addRemove1()"></app-absent-woman>
+        </ng-container>
+    </div>
+   
+
+
+
+<!-- <p>les absents hommes sont :</p>
+<ng-container *ngFor="let absent of  StudentInClass">
+    <app-absent-man *ngIf=" absent.isPresent==false && absent.isWoman==false;else elsewoman"[absentMan]="absent"></app-absent-man>
+
+    <ng-template #elsewoman>
+        <app-absent-woman *ngIf="absent.isWoman && absent.isPresent==false" [absentWoman]="absent"></app-absent-woman>
+    </ng-template>
+</ng-container> -->
