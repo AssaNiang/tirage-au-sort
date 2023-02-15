@@ -10,7 +10,7 @@ import { CLASSROOM, Students } from 'src/app/mocks/Classroom.mock';
 export class SelectComponent {
   
   StudentInClass:Students[]=CLASSROOM;
-  
+
  
   OneStudent!:Students;
   // PresentArray!:Students[];
@@ -41,7 +41,7 @@ export class SelectComponent {
   console.log(rValue)
   const idValue=StudentInClass.indexOf(rValue);
   console.log(idValue);
-  StudentInClass.splice(idValue,1);
+   StudentInClass.splice(idValue,1);
   return rValue;
 
   // person(PresentArray:Students[]){
