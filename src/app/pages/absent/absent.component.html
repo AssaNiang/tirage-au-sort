@@ -1,24 +1,28 @@
-<app-dropdown >
-    <app-absent-man></app-absent-man>
-</app-dropdown>
+<div class="container">
+    <app-dropdown>
+        <app-absent-man ></app-absent-man>
+    </app-dropdown>
+<hr>
 
+    <div class="container-Abs">
+        <div>
+            <p>les absents femmes sont :</p>
+            <ng-container *ngFor="let absent of  StudentInClass">
+                <app-absent-woman *ngIf=" absent.isPresent==false && absent.isWoman" [absentWoman]="absent"
+                    (removeElement1)="addRemove1()"></app-absent-woman>
+            </ng-container>
+        </div>
 
-<div>
-    <p>les absents femmes sont :</p>
-    <ng-container *ngFor="let absent of  StudentInClass">
-        <app-absent-woman *ngIf=" absent.isPresent==false && absent.isWoman"[absentWoman]="absent" (removeElement1)="addRemove1()"></app-absent-woman>
-    </ng-container>
-</div>
-
-    <div>
-        <p>les absents hommes sont :</p>
-        <ng-container *ngFor="let absent of  StudentInClass">
-            <app-absent-man *ngIf="absent.isPresent==false && absent.isWoman==false" [absentMan2]="absent" (removeElement)="addRemove()"></app-absent-man>
-        </ng-container>
+        <div>
+            <p>les absents hommes sont :</p>
+            <ng-container *ngFor="let absent of  StudentInClass">
+                <app-absent-man *ngIf="absent.isPresent==false && absent.isWoman==false" [absentMan2]="absent"
+                    (removeElement)="addRemove()"></app-absent-man>
+            </ng-container>
+        </div>
     </div>
 
-
-
+</div>
 
 <!-- <p>les absents hommes sont :</p>
 <ng-container *ngFor="let absent of  StudentInClass">

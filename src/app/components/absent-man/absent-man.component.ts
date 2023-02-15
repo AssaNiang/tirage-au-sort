@@ -11,6 +11,7 @@ export class AbsentManComponent {
   // je reçois la valeur du parent absent
 // @Input() absentMan!:Students;
 @Input() absentMan2!:Students_Abs;
+
 @Input() item!:string;
 
 //je transmets la valeur de l'enfant  au parent absent
