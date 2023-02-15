@@ -8,16 +8,25 @@ import { CLASSROOM, Students } from 'src/app/mocks/Classroom.mock';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent {
-  StudentInClass:Students_Abs[]=STUDENT_ABS;
- 
-  selected =" selectionner une personne";
-  update(e:any){
-    this.selected=e.target.value;
+  // StudentInClass: Students_Abs[] = STUDENT_ABS;
+    StudentInClass: Students[] = CLASSROOM;
+
+
+  selected = " selectionner une personne";
+  update(e: any) {
+    this.selected = e.target.value;
     // this.selected= e.target.value.Students.firstname;
   }
-  addName(){
-    const OneName=this.selected;
-    console.log("la personne selectionée",OneName);
+  addName() {
+    //je recupere le prenom de la personne à ajouter aux abs
+    const OneName = this.selected;
+    console.log("la personne selectionée", OneName);
+    // on va chercher l'etudient  dans la liste 
+    const absStudent = this.StudentInClass.find((student) => student.firstname === OneName)
+    console.log('abstudent',absStudent);
+    if (absStudent) {
+absStudent.isPresent= false;
+    }
   }
-//   currentItem=this.OneName;
- }
+  //   currentItem=this.OneName;
+}

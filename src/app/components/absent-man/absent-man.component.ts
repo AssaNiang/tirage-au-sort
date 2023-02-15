@@ -9,24 +9,24 @@ import { Students } from 'src/app/mocks/Classroom.mock';
 })
 export class AbsentManComponent {
   // je reçois la valeur du parent absent
-// @Input() absentMan!:Students;
-@Input() absentMan2!:Students_Abs;
+ @Input() absentMan!:Students;
+//@Input() absentMan2!:Students_Abs;
 
 @Input() item!:string;
 
 //je transmets la valeur de l'enfant  au parent absent
-// @Output() removeElement= new EventEmitter<Students>();
-@Output() removeElement2= new EventEmitter<Students_Abs>();
+@Output() removeElement= new EventEmitter<Students>();
+//@Output() removeElement2= new EventEmitter<Students_Abs>();
 
 
-// addRemove(){
-//  this.removeElement.emit();
-//  console.log("button cliqué");
-// }
+addRemove(){
+ this.removeElement.emit();
+ console.log("button cliqué");
+}
 
-addRemove2(){
-  this.removeElement2.emit();
-  console.log("button cliqué 2");
- }
+// addRemove2(){
+//   this.removeElement2.emit();
+//   console.log("button cliqué 2");
+//  }
 
 }

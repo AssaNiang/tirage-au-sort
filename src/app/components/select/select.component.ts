@@ -29,20 +29,36 @@ export class SelectComponent {
   }
   
   person(StudentInClass:Students[]){
-    console.log(StudentInClass);
-    // console.log(StudentInClass[1]["firstname"]=="Morgane");
-    // console.log(StudentInClass.slice(0,6));
-    // this.PresentArray=StudentInClass.slice(0,6);
-    // console.log(this.PresentArray);
-   
+    console.log('studentinclass',StudentInClass);
+    // je cree un onlyPresent tableau avec simplement les presents 
+   let onlyPresent =StudentInClass.filter((student)=>student.isPresent && !student.hasBeenSelected );
+    console.log('tableau de present',onlyPresent);
     
-  const rand = Math.floor(Math.random()*StudentInClass.length);
-  const rValue = StudentInClass[rand];
-  console.log(rValue)
-  const idValue=StudentInClass.indexOf(rValue);
-  console.log(idValue);
-   StudentInClass.splice(idValue,1);
+if(onlyPresent.length<=0){
+  console.log("je suis dans le if");
+  StudentInClass.forEach((student)=>student.hasBeenSelected=false)
+  onlyPresent=StudentInClass;
+  console.log('StudentInclass',StudentInClass,onlyPresent)
+}
+  const rand = Math.floor(Math.random()*onlyPresent.length);
+  const rValue = onlyPresent[rand];
+  console.log('rvalue',rValue);
+  rValue.hasBeenSelected=true;
+  console.log('rvalue avec le changemant hasbeeselected',rValue);
+
+  // const idValue=onlyPresent.indexOf(rValue);
+  // console.log(idValue);
+  //  StudentInClass.splice(idValue,1);
+  console.log('rvalue av le return',rValue);
   return rValue;
+
+  // const rand = Math.floor(Math.random()*StudentInClass.length);
+  // const rValue = StudentInClass[rand];
+  // console.log(rValue)
+  // const idValue=StudentInClass.indexOf(rValue);
+  // console.log(idValue);
+  //  StudentInClass.splice(idValue,1);
+  // return rValue;
 
   // person(PresentArray:Students[]){
   //   console.log(this.StudentInClass);

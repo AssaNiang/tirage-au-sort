@@ -16,7 +16,7 @@
         <div>
             <p>les absents hommes sont :</p>
             <ng-container *ngFor="let absent of  StudentInClass">
-                <app-absent-man *ngIf="absent.isPresent==false && absent.isWoman==false" [absentMan2]="absent"
+                <app-absent-man *ngIf="absent.isPresent==false && absent.isWoman==false" [absentMan]="absent"
                     (removeElement)="addRemove()"></app-absent-man>
             </ng-container>
         </div>
