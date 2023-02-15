@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { CLASSROOM, Students } from 'src/app/mocks/Classroom.mock';
+import { Students_Abs, STUDENT_ABS } from 'src/app/mocks/Absents.mock';
+// import { CLASSROOM, Students } from 'src/app/mocks/Classroom.mock';
 
 @Component({
   selector: 'app-absent',
@@ -7,8 +8,8 @@ import { CLASSROOM, Students } from 'src/app/mocks/Classroom.mock';
   styleUrls: ['./absent.component.css']
 })
 export class AbsentComponent {
-  StudentInClass:Students[]=CLASSROOM;
-  absent!:Students;
+  StudentInClass:Students_Abs[]=STUDENT_ABS;
+  absent!:Students_Abs;
   addRemove(){
 
   const StudentID=this.StudentInClass.indexOf(this.absent)
@@ -20,8 +21,8 @@ export class AbsentComponent {
     
     const StudentID=this.StudentInClass.indexOf(this.absent)
    console.log("studentId",StudentID);
-   this.StudentInClass.splice(StudentID,1);
-   console.log(this.StudentInClass);
+    const assa=this.StudentInClass.splice(StudentID,1);
+   console.log(assa);
     }
 
 }

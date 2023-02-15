@@ -12,6 +12,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { DisplayManComponent } from './components/display-man/display-man.component';
 import { AbsentManComponent } from './components/absent-man/absent-man.component';
 import { AbsentWomanComponent } from './components/absent-woman/absent-woman.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AbsentWomanComponent } from './components/absent-woman/absent-woman.com
     NotFoundComponent,
     DisplayManComponent,
     AbsentManComponent,
-    AbsentWomanComponent
+    AbsentWomanComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
