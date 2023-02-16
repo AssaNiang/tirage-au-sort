@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Students_Abs, STUDENT_ABS } from 'src/app/mocks/Absents.mock';
+
 import { CLASSROOM, Students } from 'src/app/mocks/Classroom.mock';
 
 @Component({
