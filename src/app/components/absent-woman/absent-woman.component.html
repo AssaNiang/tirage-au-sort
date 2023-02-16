@@ -1,2 +1,4 @@
 
-<p>. {{absentWoman.firstname}} <button (click)="addRemove1()">x</button></p>
+<ul>
+    <li *ngIf="absentWoman" > {{absentWoman.firstname}} <button (click)="addRemoveWoman()">x</button></li>
+</ul>

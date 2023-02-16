@@ -1,9 +1,3 @@
-
-<div>
-    <!-- <p *ngIf="absentMan">{{absentMan.firstname}}<button (click)="addRemove()">x</button></p> -->
-    <p *ngIf="absentMan" > . {{absentMan.firstname}}<button (click)="addRemove()">x</button></p>
-
-   
-
-
-</div>
+<ul>
+    <li *ngIf="absentMan" >  {{absentMan.firstname}}<button (click)="addRemove()">x</button></li>
+</ul>

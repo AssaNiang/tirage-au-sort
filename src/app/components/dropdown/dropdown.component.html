@@ -1,15 +1,10 @@
 <h3>Ajouter un.e absent.e</h3>
 <div>
-
-
-<select  (change)="update($event)">
-    <option value="default">selectionner une personne</option>
-    <option *ngFor="let student of  StudentInClass" [value]="student.firstname">
-        {{student.firstname}}
-    </option>
-</select>
-  
-<!-- <p>You selected {{selected}}<button>x</button></p> -->
-<!-- <button (click)="addName()">You selected {{selected}}<button>x</button></button> -->
-<button (click)="addName()" >Ajouter</button>
+    <select  (change)="update($event)">
+        <option value="default">selectionner une personne</option>
+        <option *ngFor="let student of  StudentInClass" [value]="student.firstname">
+            {{student.firstname}}
+        </option>
+    </select>
+    <button (click)="addName()" >Ajouter</button>
 </div>

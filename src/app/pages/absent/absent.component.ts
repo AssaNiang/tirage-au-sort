@@ -12,20 +12,33 @@ export class AbsentComponent {
   //  StudentInClass:Students_Abs[]=STUDENT_ABS;
    StudentInClass:Students[]=CLASSROOM;
 
-  absent!:Students;
-  addRemove(){
+   absent!:Students;
+ 
+//   addRemove(){
+// if(this.absent){
+//   console.log("ici");
+//   const StudentID=this.StudentInClass.find((student)=>student.firstname===this.absent.firstname);
 
-  const StudentID=this.StudentInClass.indexOf(this.absent)
- console.log("studentId",StudentID);
- this.StudentInClass.splice(StudentID,1);
- console.log(this.StudentInClass);
-  }
-  addRemove1(){
+//     console.log("studentId",StudentID);
+// }
     
-    const StudentID=this.StudentInClass.indexOf(this.absent)
-   console.log("studentId",StudentID);
-    const assa=this.StudentInClass.splice(StudentID,1);
-   console.log(assa);
-    }
+  //  this.StudentInClass.splice(StudentID,1);
+  //  console.log(this.StudentInClass);
+    // }
+//   addRemove(){
+
+//     console.log('abs est this.absent',this.absent);
+//   const StudentID=this.StudentInClass.indexOf(this.absent)
+//  console.log("studentId",StudentID);
+//  this.StudentInClass.splice(StudentID,1);
+//  console.log(this.StudentInClass);
+//   }
+  // addRemove1(){
+    
+  //   const StudentID=this.StudentInClass.indexOf(this.absent)
+  //  console.log("studentId",StudentID);
+  //   const student_splice=this.StudentInClass.splice(StudentID,1);
+  //  console.log(student_splice);
+  //   }
 
 }
