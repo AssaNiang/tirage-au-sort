@@ -13,6 +13,7 @@ import { DisplayManComponent } from './components/display-man/display-man.compon
 import { AbsentManComponent } from './components/absent-man/absent-man.component';
 import { AbsentWomanComponent } from './components/absent-woman/absent-woman.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
     DisplayManComponent,
     AbsentManComponent,
     AbsentWomanComponent,
-    DropdownComponent
+    DropdownComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
