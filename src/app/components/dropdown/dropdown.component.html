@@ -1,8 +1,9 @@
-<h3>Ajouter un.e absent.e</h3>
+
 <div>
+    <h3>Ajouter un.e absent.e</h3>
     <select  (change)="update($event)">
-        <option value="default">selectionner une personne</option>
-        <option *ngFor="let student of  StudentInClass" [value]="student.firstname">
+        <option value="default">sélectionner une personne</option>
+        <option [class.option]="student.firstname" *ngFor="let student of  StudentInClass" [value]="student.firstname">
             {{student.firstname}}
         </option>
     </select>
