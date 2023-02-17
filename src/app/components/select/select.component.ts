@@ -15,30 +15,27 @@ export class SelectComponent {
   OneStudent!:Students;
   // PresentArray!:Students[];
   PresentArray!:Students[];
-  // StudentAbsent:Students[]=CLASSROOM;
-//@Output() newItemEvent=new EventEmitter
   
   selectOnePerson(){
     
      this.OneStudent=this.person(this.StudentInClass);
   
     //  this.OneStudent=this.person(this.PresentArray);
-     
-// this.StudentAbsent=this.studentAbsent(this.StudentInClass)
-    
   }
   
   person(StudentInClass:Students[]){
+    console.log("je suis dans person");
     console.log('studentinclass',StudentInClass);
     // je cree un onlyPresent tableau avec simplement les presents 
    let onlyPresent =StudentInClass.filter((student)=>student.isPresent && !student.hasBeenSelected );
     console.log('tableau de present',onlyPresent);
     
-if(onlyPresent.length<=0){
+if(onlyPresent.length <=0){
   console.log("je suis dans le if");
+  // je remets tous les étudients avec hasBeenSelected=false sachant que c'est un tableau je fais un forEach pour qu'a chaque tour de boucle la valeur de hasBeenSelectedsoit false
   StudentInClass.forEach((student)=>student.hasBeenSelected=false)
   onlyPresent=StudentInClass;
-  console.log('StudentInclass',StudentInClass,onlyPresent)
+  console.log('StudentInclass',StudentInClass,'onlyPresent',onlyPresent)
 }
   const rand = Math.floor(Math.random()*onlyPresent.length);
   const rValue = onlyPresent[rand];
@@ -46,19 +43,8 @@ if(onlyPresent.length<=0){
   rValue.hasBeenSelected=true;
   console.log('rvalue avec le changemant hasbeeselected',rValue);
 
-  // const idValue=onlyPresent.indexOf(rValue);
-  // console.log(idValue);
-  //  StudentInClass.splice(idValue,1);
-  console.log('rvalue av le return',rValue);
   return rValue;
 
-  // const rand = Math.floor(Math.random()*StudentInClass.length);
-  // const rValue = StudentInClass[rand];
-  // console.log(rValue)
-  // const idValue=StudentInClass.indexOf(rValue);
-  // console.log(idValue);
-  //  StudentInClass.splice(idValue,1);
-  // return rValue;
 
   // person(PresentArray:Students[]){
   //   console.log(this.StudentInClass);

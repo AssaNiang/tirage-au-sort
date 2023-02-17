@@ -1,9 +1,15 @@
-div{
-    margin-top: 10px;
-    width:40vw;
-    height:50vh;
-    border:black solid 3px;
+.undefined{
+/* margin-top:30px; */
+width:70%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height:38%;
+background-color: #FFFFFF;
+/* border: 2px solid black; */
 }
+
 button{
     background: #CE0033;
     border-radius: 60px;
@@ -15,14 +21,19 @@ button{
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    /* display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
+    margin-bottom:50px;
 }
 .container{
 display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+margin-top: 10px;
+width:70vw;
+height: 87vh;
+gap:5px;
+/* margin-bottom:60%; */
+
+
+
 }

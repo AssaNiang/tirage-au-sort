@@ -3,14 +3,14 @@
     
     
     <ng-container *ngIf="OneStudent==undefined; else second">
-        <div> <p>Personne n'a été sélectionnée actuellement </p></div>
+        <div class="undefined"> <p>Personne n'a été sélectionnée actuellement </p></div>
     </ng-container>
     <!-- on doit faire un ng-template pour faire un else et lui donner un#nomDuElse -->
-    <ng-template #second>
+    <ng-template  #second>
         <app-display-woman *ngIf="OneStudent!.isPresent && OneStudent.isWoman; else elseBlock" [Astudent]="OneStudent" >
         </app-display-woman>
     </ng-template>
-    <ng-template #elseBlock>
+    <ng-template  #elseBlock>
         <app-display-man [AstudentMan]="OneStudent"></app-display-man>
     </ng-template>
 </div>

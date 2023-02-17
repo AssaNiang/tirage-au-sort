@@ -9,7 +9,7 @@ img{
     display: block;
 }
 div{
-    width:90vw;
+    
     height:100vh;;
     border: blue 3px solid;
     display: flex;

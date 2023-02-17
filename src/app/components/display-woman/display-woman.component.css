@@ -1,6 +1,12 @@
-div{
-    margin-top: 10px;
-    width:40vw;
-    height:50vh;
-    border:black solid 3px;
+.container{
+margin-top:40px;
+width:50vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height:40vh;
+background-color: #FFFFFF;
+gap:5px;
+margin-top: 10px;
 }
