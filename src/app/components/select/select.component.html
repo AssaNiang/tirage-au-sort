@@ -1,30 +1,32 @@
-<button (click)="selectOnePerson()">🎰 Sélectionner une personne 🎰</button>
-
-
-<ng-container *ngIf="OneStudent==undefined; else second">
-   <div> <p>Personne n'a été sélectionnée actuellement </p></div>
-</ng-container>
-<!-- on doit faire un ng-template pour faire un else et lui donner un#nomDuElse -->
-<ng-template #second>
-    <app-display-woman *ngIf="OneStudent!.isPresent && OneStudent.isWoman; else elseBlock" [Astudent]="OneStudent" >
-    </app-display-woman>
-</ng-template>
-<ng-template #elseBlock>
-    <app-display-man [AstudentMan]="OneStudent"></app-display-man>
-</ng-template>
-
+<div class="container">
+    <button (click)="selectOnePerson()">🎰 Sélectionner une personne 🎰</button>
+    
+    
+    <ng-container *ngIf="OneStudent==undefined; else second">
+        <div> <p>Personne n'a été sélectionnée actuellement </p></div>
+    </ng-container>
+    <!-- on doit faire un ng-template pour faire un else et lui donner un#nomDuElse -->
+    <ng-template #second>
+        <app-display-woman *ngIf="OneStudent!.isPresent && OneStudent.isWoman; else elseBlock" [Astudent]="OneStudent" >
+        </app-display-woman>
+    </ng-template>
+    <ng-template #elseBlock>
+        <app-display-man [AstudentMan]="OneStudent"></app-display-man>
+    </ng-template>
+</div>
 <!-- <p>L'éleve tiré aux sort est un garcon: </p>
-<div *ngIf="OneStudent!.isPresent && OneStudent.isWoman==false">
-    <p>{{OneStudent.firstname}}-{{OneStudent.isPresent}}-{{OneStudent.isWoman}}</p>
-</div>  -->
-<!-- <p>L'éleve tiré aux sort d'un garcon absent: </p>
-<div *ngIf="OneStudent!.isPresent== false && OneStudent.isWoman==false">
-    <p>{{OneStudent.firstname}}-{{OneStudent.isPresent}}-{{OneStudent.isWoman}}</p>
-</div> 
-<p>Les eleves garcons absents tirés aux sort : </p> -->
-
-<!-- <ng-container *ngIf=" OneStudent.isPresent== false && OneStudent.isWoman==false" >
-    <div *ngFor="let OneStudent of StudentInClass" ></div>
-    <p>{{OneStudent.firstname}}-{{OneStudent.isWoman}}-{{OneStudent.isPresent}}</p>
-</ng-container> -->
-
+    <div *ngIf="OneStudent!.isPresent && OneStudent.isWoman==false">
+        <p>{{OneStudent.firstname}}-{{OneStudent.isPresent}}-{{OneStudent.isWoman}}</p>
+    </div>  -->
+    <!-- <p>L'éleve tiré aux sort d'un garcon absent: </p>
+        <div *ngIf="OneStudent!.isPresent== false && OneStudent.isWoman==false">
+            <p>{{OneStudent.firstname}}-{{OneStudent.isPresent}}-{{OneStudent.isWoman}}</p>
+        </div> 
+        <p>Les eleves garcons absents tirés aux sort : </p> -->
+        
+        <!-- <ng-container *ngIf=" OneStudent.isPresent== false && OneStudent.isWoman==false" >
+            <div *ngFor="let OneStudent of StudentInClass" ></div>
+            <p>{{OneStudent.firstname}}-{{OneStudent.isWoman}}-{{OneStudent.isPresent}}</p>
+        </ng-container> -->
+        
+        

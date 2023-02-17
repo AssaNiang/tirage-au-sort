@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-//import { Students_Abs, STUDENT_ABS } from 'src/app/mocks/Absents.mock';
-
+import { Component, Input } from '@angular/core';
 import { CLASSROOM, Students } from 'src/app/mocks/Classroom.mock';
 
 @Component({
@@ -9,10 +7,12 @@ import { CLASSROOM, Students } from 'src/app/mocks/Classroom.mock';
   styleUrls: ['./absent.component.css']
 })
 export class AbsentComponent {
-  //  StudentInClass:Students_Abs[]=STUDENT_ABS;
+
    StudentInClass:Students[]=CLASSROOM;
 
-   absent!:Students;
+  //  absent!:Students;
+  @Input() absentMan!:Students;
+
  
 
 

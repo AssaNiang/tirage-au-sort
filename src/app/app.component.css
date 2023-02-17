@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:'roboto',sans-serif;
+}
+img{
+    max-width:100%;
+    display: block;
+}
+div{
+    width:90vw;
+    height:100vh;;
+    border: blue 3px solid;
+    display: flex;
+    flex-direction: column;
+
+}
+.a{
+    background-color:  #CE0033;
+}

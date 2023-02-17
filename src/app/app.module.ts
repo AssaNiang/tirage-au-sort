@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SelectComponent } from './components/select/select.component';
 import { DisplayWomanComponent } from './components/display-woman/display-woman.component';
-import { HeaderComponent } from './pages/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { DrawComponent } from './pages/draw/draw.component';
 import { AbsentComponent } from './pages/absent/absent.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
