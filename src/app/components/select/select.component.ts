@@ -26,13 +26,13 @@ export class SelectComponent {
   person(StudentInClass:Students[]){
     console.log("je suis dans person");
     console.log('studentinclass',StudentInClass);
-    // je cree un onlyPresent tableau avec simplement les presents 
-   let onlyPresent =StudentInClass.filter((student)=>student.isPresent && !student.hasBeenSelected );
+    // je cree un onlyPresent tableau avec simplement les presents j'ai besoin du filter
+    let onlyPresent =StudentInClass.filter((student)=>student.isPresent && !student.hasBeenSelected );
     console.log('tableau de present',onlyPresent);
     
 if(onlyPresent.length <=0){
   console.log("je suis dans le if");
-  // je remets tous les étudients avec hasBeenSelected=false sachant que c'est un tableau je fais un forEach pour qu'a chaque tour de boucle la valeur de hasBeenSelectedsoit false
+  // je remets tous les étudients avec hasBeenSelected=false sachant que c'est un tableau je fais un forEach pour qu'a chaque tour de boucle la valeur de hasBeenSelected soit false
   StudentInClass.forEach((student)=>student.hasBeenSelected=false)
   onlyPresent=StudentInClass;
   console.log('StudentInclass',StudentInClass,'onlyPresent',onlyPresent)
@@ -40,6 +40,7 @@ if(onlyPresent.length <=0){
   const rand = Math.floor(Math.random()*onlyPresent.length);
   const rValue = onlyPresent[rand];
   console.log('rvalue',rValue);
+  // je mets la valeur de hasBeenSelected a true pour ne pas que la personne soit tirer une seconde fois
   rValue.hasBeenSelected=true;
   console.log('rvalue avec le changemant hasbeeselected',rValue);
 

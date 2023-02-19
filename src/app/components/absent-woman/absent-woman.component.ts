@@ -17,15 +17,15 @@ addRemoveWoman(){
   
   // je verifie ce que je recois
    console.log("this absenWOman",this.absentWoman);
-  //  je mets le nom dans une variable NameStudent
+  //  je mets la personne  dans une variable NameStudent
   let caracteristic_student_woman=this.absentWoman;
   console.log("caracteristic_student-woman",caracteristic_student_woman);
-  //je vais chercher l'etudiant dans la liste de mon mock CLASSROOM
+  //je vais chercher l'etudiant dans la liste en fonction de son id de mon mock CLASSROOM
   const absent_Student=this.StudentInClass.find((student)=>student.id === caracteristic_student_woman.id);
    
   console.log("absent_Sudent",absent_Student);
    if(absent_Student){
-    // je veux que l'etudient absent soit retirer de absent  en changant son statut isPresent en présent c'est a dire en  true
+    // je veux que l'etudiant absent soit retirer de absent  en changant son statut isPresent en présent c'est a dire en  true
     absent_Student.isPresent=true;
     console.log("je suis plus absente mais présente");
    }

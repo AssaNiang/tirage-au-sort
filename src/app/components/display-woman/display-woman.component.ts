@@ -7,7 +7,7 @@ import { Students } from 'src/app/mocks/Classroom.mock';
   styleUrls: ['./display-woman.component.css']
 })
 export class DisplayWomanComponent {
-  // je recois un etudient du parent
+  // je recois un etudiant du parent
   @Input() Astudent!:Students;
 
 }
