@@ -4,18 +4,32 @@
     </div>
     <hr >
     <div class="container-Abs">
-        <div>
+        <!-- Premier façon-->
+        <!-- <div>
             <p>Liste des absentes</p>
             <ng-container *ngFor="let absent of  StudentInClass">
                 <app-absent-woman *ngIf=" absent.isPresent==false && absent.isWoman" [absentWoman]="absent"
                 ></app-absent-woman>
             </ng-container>
-        </div>
-        <div>
+        </div>  -->
+        <!-- <div>
             <p>Liste des absents</p>
             <ng-container *ngFor="let absent of  StudentInClass">
                 <app-absent-man *ngIf="absent.isPresent==false && absent.isWoman==false" [absentMan]="absent"
                 ></app-absent-man>
+            </ng-container>
+        </div> -->
+        <!-- Deuxieme façon de faire  -->
+         <div>
+            <p>Liste des absentes</p>
+            <ng-container *ngFor="let absent of  getStudentByGenre(true)">
+                <app-absent-woman  [absentWoman]="absent"></app-absent-woman>
+            </ng-container>
+        </div>
+        <div>
+            <p>Liste des absents</p>
+            <ng-container *ngFor="let absent of  getStudentByGenre(false)">
+                <app-absent-man [absentMan]="absent"></app-absent-man>
             </ng-container>
         </div>
     </div> 

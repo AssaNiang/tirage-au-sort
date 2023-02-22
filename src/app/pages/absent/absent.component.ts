@@ -13,7 +13,9 @@ export class AbsentComponent {
   //  absent!:Students;
   @Input() absentMan!:Students;
 
- 
+ getStudentByGenre(isWoman:boolean){
+return this.StudentInClass.filter((student)=>!student.isPresent && student.isWoman===isWoman);
+ }
 
 
 }
