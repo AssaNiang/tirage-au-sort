@@ -34,7 +34,8 @@ if(onlyPresent.length <=0){
   console.log("je suis dans le if");
   // je remets tous les étudients avec hasBeenSelected=false sachant que c'est un tableau je fais un forEach pour qu'a chaque tour de boucle la valeur de hasBeenSelected soit false
   StudentInClass.forEach((student)=>student.hasBeenSelected=false)
-  onlyPresent=StudentInClass;
+  // je mets dans onlyPresent que les presents dans mon mock
+  onlyPresent=StudentInClass.filter((student)=>student.isPresent);
   console.log('StudentInclass',StudentInClass,'onlyPresent',onlyPresent)
 }
   const rand = Math.floor(Math.random()*onlyPresent.length);
