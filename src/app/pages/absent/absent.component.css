@@ -17,7 +17,16 @@ p{
 .dropdown{
     margin-left: 154px;
 }
-.container div{
+/* .container div{
     width:50%;
     height:50%;
+} */
+.container-Abs{
+    height:90vh;
+}
+.container-Abs div{
+    height:50%;
+}
+.margin{
+    margin-top:150px;
 }
